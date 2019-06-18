@@ -6,4 +6,6 @@ body {
   @include font-stile(1.8rem, $font-color, 400, 1.6);
   scroll-behavior: smooth;
   background: #fff;
+  min-height: 100vh;
+  min-width: 320px;
 }
