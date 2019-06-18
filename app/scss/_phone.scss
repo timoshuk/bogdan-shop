@@ -1,0 +1,18 @@
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    margin-right: 0.5em;
+  }
+}
+
+.phone__link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: $main-color;
+  font-size: 2.2rem;
+  text-align: left;
+}
