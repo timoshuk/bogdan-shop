@@ -103,13 +103,8 @@ $breakpoints: (
 }
 
 //Font styles
-@mixin font-source-sans(
-  $size: false,
-  $colour: false,
-  $weight: false,
-  $lh: false
-) {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+@mixin font-stile($size: false, $colour: false, $weight: false, $lh: false) {
+  font-family: $main-font;
   @if $size {
     font-size: $size;
   }

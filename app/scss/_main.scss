@@ -1,4 +1,9 @@
-html,
+html {
+  font-size: 10px;
+}
+
 body {
-    overflow-x: hidden;
+  @include font-stile(1.8rem, $font-color, 400, 1.6);
+  scroll-behavior: smooth;
+  background: #fff;
 }
