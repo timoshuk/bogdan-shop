@@ -316,6 +316,13 @@ template {
     z-index: z('site-header');
 }
 */
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
 html {
   font-size: 10px; }
 
@@ -349,10 +356,9 @@ body {
   padding-bottom: 1em; }
 
 .phone__link {
+  display: block;
   text-decoration: none;
   color: #fbc237;
-  font-size: 2rem; }
-  .phone__link span {
-    font-weight: normal; }
+  font-size: 2.2rem; }
 
 /*# sourceMappingURL=styles.css.map */

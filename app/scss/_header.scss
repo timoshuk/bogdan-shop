@@ -12,10 +12,8 @@
 }
 
 .phone__link {
+  display: block;
   text-decoration: none;
   color: $main-color;
-  font-size: 2rem;
-  & span {
-    font-weight: normal;
-  }
+  font-size: 2.2rem;
 }
