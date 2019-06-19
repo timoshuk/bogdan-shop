@@ -1,3 +1,11 @@
+@mixin animate {
+  transition: all 0.3s ease-in-out;
+}
+@mixin block {
+  position: relative;
+  min-height: 100vh;
+}
+
 //https://engageinteractive.co.uk/blog/top-10-scss-mixins
 
 //Media queries

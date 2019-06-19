@@ -343,9 +343,14 @@ body {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px; }
+  @media only screen and (min-width: 768px) {
+    .container {
+      padding-left: 50px;
+      padding-right: 50px; } }
 
 #header {
-  position: relative; }
+  position: relative;
+  min-height: 100vh; }
 
 .header__top {
   background-color: #1e2d32;
@@ -354,6 +359,16 @@ body {
   text-align: center;
   padding-top: 5em;
   padding-bottom: 1em; }
+  @media only screen and (min-width: 768px) {
+    .header__top {
+      text-align: left;
+      padding-top: 1.5em;
+      padding-bottom: 1.5em; } }
+  @media only screen and (min-width: 768px) {
+    .header__top .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
 
 .phone {
   display: flex;
@@ -363,12 +378,17 @@ body {
     margin-right: 0.5em; }
 
 .phone__link {
+  transition: all 0.3s ease-in-out;
   display: block;
   position: relative;
   text-decoration: none;
   color: #fbc237;
   font-size: 2.2rem;
-  text-align: left; }
+  text-align: left;
+  outline: none; }
+  .phone__link:hover, .phone__link:focus {
+    text-decoration: underline;
+    color: #d7103b; }
 
 .logo {
   font-size: 3rem;
@@ -380,5 +400,47 @@ body {
   top: 0.5em;
   left: 50%;
   transform: translateX(-50%); }
+  @media only screen and (min-width: 768px) {
+    .logo {
+      position: relative;
+      text-align: left;
+      top: initial;
+      left: initial;
+      transform: initial; } }
+
+.main-nav__btn {
+  z-index: 999;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px; }
+  .main-nav__btn span {
+    transition: all 0.3s ease-in-out;
+    display: block;
+    opacity: 1;
+    min-height: 3px;
+    background: #fff;
+    margin-bottom: 5px; }
+  .main-nav__btn:hover span, .main-nav__btn:focus span {
+    background: #d7103b; }
+
+.main-nav__btn--open span {
+  background: #d7103b; }
+
+.main-nav__btn--open span:nth-child(2) {
+  opacity: 0;
+  display: none; }
+
+.main-nav__btn--open span:first-child {
+  transform: rotate(45deg); }
+
+.main-nav__btn--open span:last-child {
+  transform: rotate(-45deg) translate(5px, -5px); }
 
 /*# sourceMappingURL=styles.css.map */

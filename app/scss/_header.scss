@@ -1,5 +1,5 @@
 #header {
-  position: relative;
+  @include block;
 }
 
 .header__top {
@@ -9,4 +9,17 @@
   text-align: center;
   padding-top: 5em;
   padding-bottom: 1em;
+  @include mq("tablet") {
+    text-align: left;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+  & .container {
+    @include mq("tablet") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }

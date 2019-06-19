@@ -1,0 +1,47 @@
+.main-nav__btn {
+  z-index: 999;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+
+  & span {
+    @include animate;
+    display: block;
+    opacity: 1;
+    min-height: 3px;
+    background: $light-color;
+    margin-bottom: 5px;
+  }
+
+  &:hover,
+  &:focus {
+    & span {
+      background: $hover-color;
+    }
+  }
+}
+
+.main-nav__btn--open {
+  & span {
+    background: $hover-color;
+  }
+
+  & span:nth-child(2) {
+    opacity: 0;
+    display: none;
+  }
+
+  & span:first-child {
+    transform: rotate(45deg);
+  }
+  & span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

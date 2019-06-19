@@ -9,10 +9,18 @@
 }
 
 .phone__link {
+  @include animate;
   display: block;
   position: relative;
   text-decoration: none;
   color: $main-color;
   font-size: 2.2rem;
   text-align: left;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $hover-color;
+  }
 }
