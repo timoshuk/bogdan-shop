@@ -480,14 +480,45 @@ body {
   padding-bottom: 4rem;
   position: relative;
   min-height: 40vh;
+  padding-bottom: 8rem;
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/slogan/hot.jpg) no-repeat;
   background-size: cover; }
+  #slogan::after {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url(../images/slogan/download.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-animation: arrow 1s ease-in-out infinite;
+            animation: arrow 1s ease-in-out infinite; }
   @media only screen and (min-width: 1024px) {
     #slogan {
       display: flex;
       flex-direction: column;
       justify-content: center; } }
+
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes arrow {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .main-header {
   max-width: 490px;
@@ -517,5 +548,18 @@ body {
   @media only screen and (min-width: 1024px) {
     .subtitle {
       max-width: 720px; } }
+
+.block-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #444;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+#faucet {
+  max-width: 100%;
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=styles.css.map */
