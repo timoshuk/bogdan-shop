@@ -1,25 +1,11 @@
 #header {
-  @include block;
+  background-color: $bg-dark;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .header__top {
-  background-color: $bg-dark;
   color: $light-color;
   font-weight: 600;
   text-align: center;
-  padding-top: 5em;
-  padding-bottom: 1em;
-  @include mq("tablet") {
-    text-align: left;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-  }
-
-  & .container {
-    @include mq("tablet") {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
 }

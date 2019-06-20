@@ -8,6 +8,10 @@
 
 html {
   font-size: 10px;
+
+  @include mq("tablet-wide") {
+    font-size: 12px;
+  }
 }
 
 body {

@@ -1,0 +1,18 @@
+.subtitle {
+  color: $light-color;
+  font-size: 3.2rem;
+  line-height: 1;
+  font-weight: bold;
+  max-width: 490px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  & span {
+    color: $main-color;
+  }
+
+  @include mq("tablet-wide") {
+    max-width: 720px;
+  }
+}

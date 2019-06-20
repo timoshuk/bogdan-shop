@@ -2,8 +2,10 @@
   transition: all 0.3s ease-in-out;
 }
 @mixin block {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   position: relative;
-  min-height: 100vh;
+  min-height: 40vh;
 }
 
 //https://engageinteractive.co.uk/blog/top-10-scss-mixins
