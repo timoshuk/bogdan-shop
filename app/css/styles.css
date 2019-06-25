@@ -360,6 +360,11 @@ body {
   color: #fff;
   font-weight: 600;
   text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .header__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-around; } }
 
 .phone {
   display: flex;
@@ -388,6 +393,9 @@ body {
   color: #fbc237;
   text-align: center;
   padding-bottom: 1em; }
+  @media only screen and (min-width: 768px) {
+    .logo {
+      padding-bottom: 0; } }
 
 .main-nav__btn {
   z-index: 999;
@@ -542,9 +550,8 @@ body {
   max-width: 490px;
   text-align: center;
   margin-left: auto;
-  margin-right: auto; }
-  .subtitle span {
-    color: #fbc237; }
+  margin-right: auto;
+  margin-bottom: 1.5em; }
   @media only screen and (min-width: 1024px) {
     .subtitle {
       max-width: 720px; } }

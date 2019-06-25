@@ -7,10 +7,7 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-
-  & span {
-    color: $main-color;
-  }
+  margin-bottom: 1.5em;
 
   @include mq("tablet-wide") {
     max-width: 720px;

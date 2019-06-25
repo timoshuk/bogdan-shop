@@ -8,4 +8,10 @@
   color: $light-color;
   font-weight: 600;
   text-align: center;
+
+  @include mq("tablet") {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
