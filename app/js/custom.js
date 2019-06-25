@@ -12,6 +12,8 @@ window.onload = function () {
   var toggleBtn = document.getElementById("main-nav__btn-toggle");
   var nainNavList = document.getElementById("main-nav__list");
   var mainNavLink = document.querySelectorAll(".main-nav__link");
+  var imagesLazy = document.querySelectorAll("img[data-src]");
+  imgLazy(imagesLazy);
   toggleBtn.addEventListener("click", showMenu);
 
   _toConsumableArray(mainNavLink).forEach(function (el) {
@@ -21,5 +23,11 @@ window.onload = function () {
   function showMenu() {
     toggleBtn.classList.toggle("main-nav__btn--open");
     nainNavList.classList.toggle("main-nav__list--open");
+  }
+
+  function imgLazy(imgs) {
+    _toConsumableArray(imgs).forEach(function (itemImg) {
+      itemImg.setAttribute("src", itemImg.getAttribute("data-src"));
+    });
   }
 };
