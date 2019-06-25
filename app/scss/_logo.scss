@@ -1,11 +1,23 @@
 .logo {
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 1em;
-  color: $main-color;
   text-align: center;
   padding-bottom: 1em;
   @include mq("tablet") {
     padding-bottom: 0;
+  }
+
+  & a {
+    @include animate;
+    display: block;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1em;
+    color: $main-color;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $hover-color;
+    }
   }
 }

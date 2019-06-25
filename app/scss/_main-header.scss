@@ -9,7 +9,13 @@
   text-align: center;
   color: $main-color;
 
-  @include mq("tablet-wide") {
+  @include mq("tablet") {
     max-width: 720px;
+  }
+
+  @include mq("desktop") {
+    max-width: 820px;
+    font-size: 7rem;
+    margin-bottom: 0.5em;
   }
 }
