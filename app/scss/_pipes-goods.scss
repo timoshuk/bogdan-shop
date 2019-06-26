@@ -1,22 +1,49 @@
 .pipes-goods {
-  max-width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   overflow-x: hidden;
+}
+
+.pipes-goods__item {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+
+  @include mq("tablet") {
+    max-width: initial;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .pipes-goods__img {
   position: relative;
-  width: 100%;
-  max-width: 600px;
   height: 60vw;
   max-height: 400px;
-  padding-bottom: 20px;
+  margin-bottom: 30px;
   overflow: hidden;
-
+  @include mq("tablet") {
+    min-width: 300px;
+    height: initial;
+    margin-right: 2em;
+  }
   & img {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+  }
+}
+
+.pipes-goods__description {
+  text-align: justify;
+  margin-bottom: 1em;
+
+  & b {
+    text-transform: uppercase;
+    color: $main-color;
   }
 }

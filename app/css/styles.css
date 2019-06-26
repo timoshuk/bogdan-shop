@@ -324,7 +324,8 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-size: 10px; }
+  font-size: 10px;
+  scroll-behavior: smooth; }
 
 body {
   font-family: "PT Sans", sans-serif;
@@ -332,7 +333,6 @@ body {
   color: #444;
   font-weight: 400;
   line-height: 1.6;
-  scroll-behavior: smooth;
   background: #fff;
   min-height: 100vh;
   min-width: 320px; }
@@ -364,7 +364,10 @@ body {
       justify-content: space-around; } }
   @media only screen and (min-width: 1248px) {
     .header__top {
-      justify-content: space-between; } }
+      justify-content: space-between; }
+      .header__top .work-time {
+        margin-left: auto;
+        margin-right: 1em; } }
 
 .phone {
   display: flex;
@@ -455,7 +458,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 600;
-  padding-top: 2em;
+  padding-top: 0.5em;
   padding-left: 2.3em;
   padding-right: 2.3em; }
   @media only screen and (min-width: 1248px) {
@@ -500,7 +503,7 @@ body {
     left: 0px; } }
 
 .main-nav__item {
-  margin-bottom: 1em; }
+  margin-bottom: 0.3em; }
   @media only screen and (min-width: 1248px) {
     .main-nav__item {
       margin-left: 1em; } }
@@ -520,12 +523,10 @@ body {
     color: #f68aa1; }
 
 #slogan {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  position: relative;
-  min-height: 40vh;
   padding-top: 8rem;
   padding-bottom: 8rem;
+  position: relative;
+  min-height: 40vh;
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/slogan/hot.jpg) no-repeat;
   background-size: cover; }
@@ -533,20 +534,6 @@ body {
     #slogan {
       padding-top: 10rem;
       padding-bottom: 10rem; } }
-  #slogan::after {
-    display: block;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    content: "";
-    width: 50px;
-    height: 50px;
-    background: url(../images/slogan/download.svg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    -webkit-animation: arrow 1s ease-in-out infinite;
-            animation: arrow 1s ease-in-out infinite; }
 
 @-webkit-keyframes arrow {
   0% {
@@ -604,31 +591,65 @@ body {
   margin-right: auto; }
 
 .buy-from-us {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  text-align: center; }
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  background-color: #1e2d32; }
   .buy-from-us h1 {
     font-size: 5rem;
     font-weight: bold;
-    color: #444; }
+    color: #fff; }
 
 .pipes-goods {
-  max-width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   overflow-x: hidden; }
+
+.pipes-goods__item {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 768px) {
+    .pipes-goods__item {
+      max-width: initial;
+      display: flex;
+      justify-content: flex-start; } }
 
 .pipes-goods__img {
   position: relative;
-  width: 100%;
-  max-width: 600px;
   height: 60vw;
   max-height: 400px;
-  padding-bottom: 20px;
+  margin-bottom: 30px;
   overflow: hidden; }
+  @media only screen and (min-width: 768px) {
+    .pipes-goods__img {
+      min-width: 300px;
+      height: initial;
+      margin-right: 2em; } }
   .pipes-goods__img img {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.pipes-goods__description {
+  text-align: justify;
+  margin-bottom: 1em; }
+  .pipes-goods__description b {
+    text-transform: uppercase;
+    color: #fbc237; }
+
+.goods-title {
+  font-size: 2.5rem;
+  color: #444;
+  line-height: 1.5em;
+  margin-bottom: 0.6em; }
+  .goods-title span {
+    color: #fbc237;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=styles.css.map */

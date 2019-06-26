@@ -1,0 +1,11 @@
+.goods-title {
+  font-size: 2.5rem;
+  color: $font-color;
+  line-height: 1.5em;
+  margin-bottom: 0.6em;
+
+  & span {
+    color: $main-color;
+    text-transform: uppercase;
+  }
+}
