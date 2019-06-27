@@ -9,7 +9,10 @@
   margin-right: auto;
   margin-bottom: 1.5em;
 
-  @include mq("tablet-wide") {
+  @include mq("tablet") {
     max-width: 720px;
+  }
+  @include mq("desktop") {
+    font-size: 4.5rem;
   }
 }

@@ -589,6 +589,12 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em; }
+  @media only screen and (min-width: 768px) {
+    .subtitle {
+      max-width: 720px; } }
+  @media only screen and (min-width: 1248px) {
+    .subtitle {
+      font-size: 4.5rem; } }
 
 .block-title {
   font-size: 4.5rem;
@@ -641,7 +647,7 @@ body {
   overflow: hidden; }
   @media only screen and (min-width: 768px) {
     .pipes-goods__img {
-      min-width: 30%;
+      min-width: 35%;
       height: initial;
       margin-right: 2em;
       box-shadow: 2px 0 10px 3px #1e2d32; } }
@@ -670,8 +676,44 @@ body {
   color: #444;
   line-height: 1.5em;
   margin-bottom: 0.6em; }
+  @media only screen and (min-width: 1248px) {
+    .goods-title {
+      font-size: 3.5rem; } }
   .goods-title span {
     color: #fbc237;
     text-transform: uppercase; }
+  .goods-title.goods-title--block {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 1em; }
+    @media only screen and (min-width: 1248px) {
+      .goods-title.goods-title--block {
+        margin-bottom: 2em; } }
+
+.pumps {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  position: relative;
+  min-height: 40vh;
+  background-color: #f3f3f3; }
+
+.pumps-wrap {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media only screen and (min-width: 768px) {
+    .pumps-wrap {
+      max-width: initial;
+      display: flex; } }
+
+.pumps__img img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

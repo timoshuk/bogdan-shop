@@ -4,8 +4,22 @@
   line-height: 1.5em;
   margin-bottom: 0.6em;
 
+  @include mq("desktop") {
+    font-size: 3.5rem;
+  }
+
   & span {
     color: $main-color;
     text-transform: uppercase;
+  }
+
+  &.goods-title--block {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 1em;
+
+    @include mq("desktop") {
+      margin-bottom: 2em;
+    }
   }
 }
