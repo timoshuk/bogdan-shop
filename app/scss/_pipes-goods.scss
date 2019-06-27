@@ -24,9 +24,10 @@
   margin-bottom: 30px;
   overflow: hidden;
   @include mq("tablet") {
-    min-width: 300px;
+    min-width: 30%;
     height: initial;
     margin-right: 2em;
+    box-shadow: 2px 0 10px 3px $bg-dark;
   }
   & img {
     position: absolute;
@@ -41,6 +42,11 @@
 .pipes-goods__description {
   text-align: justify;
   margin-bottom: 1em;
+
+  @include mq("desktop") {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 
   & b {
     text-transform: uppercase;

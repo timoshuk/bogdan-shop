@@ -533,7 +533,16 @@ body {
   @media only screen and (min-width: 1248px) {
     #slogan {
       padding-top: 10rem;
-      padding-bottom: 10rem; } }
+      padding-bottom: 10rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media only screen and (min-width: 1248px) and (min-width: 768px) {
+    #slogan {
+      padding-left: 50px;
+      padding-right: 50px; } }
 
 @-webkit-keyframes arrow {
   0% {
@@ -595,10 +604,18 @@ body {
   padding-bottom: 4rem;
   text-align: center;
   background-color: #1e2d32; }
+  @media only screen and (min-width: 768px) {
+    .buy-from-us {
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+              clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+      padding-bottom: 8rem; } }
   .buy-from-us h1 {
     font-size: 5rem;
     font-weight: bold;
     color: #fff; }
+    @media only screen and (min-width: 1248px) {
+      .buy-from-us h1 {
+        font-size: 7rem; } }
 
 .pipes-goods {
   padding-top: 4rem;
@@ -624,9 +641,10 @@ body {
   overflow: hidden; }
   @media only screen and (min-width: 768px) {
     .pipes-goods__img {
-      min-width: 300px;
+      min-width: 30%;
       height: initial;
-      margin-right: 2em; } }
+      margin-right: 2em;
+      box-shadow: 2px 0 10px 3px #1e2d32; } }
   .pipes-goods__img img {
     position: absolute;
     left: 0;
@@ -639,6 +657,10 @@ body {
 .pipes-goods__description {
   text-align: justify;
   margin-bottom: 1em; }
+  @media only screen and (min-width: 1248px) {
+    .pipes-goods__description {
+      font-size: 2rem;
+      font-weight: 600; } }
   .pipes-goods__description b {
     text-transform: uppercase;
     color: #fbc237; }

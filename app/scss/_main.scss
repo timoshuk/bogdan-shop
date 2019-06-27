@@ -9,9 +9,6 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  @include mq("tablet-wide") {
-    font-size: 12px;
-  }
 }
 
 body {
