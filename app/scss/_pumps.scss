@@ -4,13 +4,29 @@
 }
 
 .pumps-wrap {
-  max-width: 500px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 
-  @include mq("tablet") {
+  @include mq("desktop") {
     max-width: initial;
     display: flex;
+  }
+}
+
+.pumps__item {
+  margin-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: $light-color;
+  border-radius: 5px;
+
+  @include mq("desktop") {
+    max-width: 450px;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
 
@@ -18,8 +34,54 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1em;
   object-fit: cover;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 200px;
   border-radius: 100%;
+}
+
+.pumps__description {
+  text-align: justify;
+  margin-bottom: 1em;
+
+  @include mq("desktop") {
+    font-size: 2rem;
+  }
+
+  & b {
+    text-transform: uppercase;
+    color: $main-color;
+  }
+}
+
+.pumps__list {
+  list-style: none;
+
+  &-item {
+    position: relative;
+    font-size: 2rem;
+    line-height: 1.4;
+    padding-left: 1.5em;
+    padding-right: 0.5em;
+    margin-bottom: 0.7em;
+    text-align: justify;
+
+    &::before {
+      position: absolute;
+      left: -0.2em;
+      top: -0.2em;
+      content: "\2713";
+      font-size: 2em;
+      font-weight: bold;
+      color: $main-color;
+    }
+  }
+}
+
+.pumps__list-title {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-bottom: 1em;
 }

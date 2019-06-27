@@ -16,4 +16,8 @@ body {
   background: #fff;
   min-height: 100vh;
   min-width: 320px;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
