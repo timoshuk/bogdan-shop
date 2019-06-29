@@ -417,7 +417,7 @@ body {
 
 .main-nav__btn {
   z-index: 999;
-  position: absolute;
+  position: fixed;
   top: 0.5em;
   right: 0.5em;
   background: transparent;
@@ -435,10 +435,10 @@ body {
     display: block;
     opacity: 1;
     min-height: 3px;
-    background: #fff;
+    background: #d7103b;
     margin-bottom: 5px; }
   .main-nav__btn:hover span, .main-nav__btn:focus span {
-    background: #d7103b; }
+    background: #f35a7b; }
 
 .main-nav__btn--open span {
   background: #d7103b; }
@@ -531,13 +531,17 @@ body {
     color: #f68aa1; }
 
 #slogan {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   position: relative;
   min-height: 40vh;
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/slogan/hot.jpg) no-repeat;
   background-size: cover; }
+  @media only screen and (min-width: 1000px) {
+    #slogan {
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
   @media only screen and (min-width: 1000px) {
     #slogan {
       padding-top: 10rem;
@@ -630,7 +634,13 @@ body {
 .pipes-goods {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  position: relative;
+  min-height: 40vh;
   overflow-x: hidden; }
+  @media only screen and (min-width: 1000px) {
+    .pipes-goods {
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
 
 .pipes-goods__item {
   max-width: 600px;
@@ -695,11 +705,15 @@ body {
         margin-bottom: 2em; } }
 
 .pumps {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   position: relative;
   min-height: 40vh;
   background-color: #f3f3f3; }
+  @media only screen and (min-width: 1000px) {
+    .pumps {
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
 
 .pumps-wrap {
   max-width: 600px;
@@ -771,10 +785,14 @@ body {
   margin-bottom: 1em; }
 
 .filters {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   position: relative;
   min-height: 40vh; }
+  @media only screen and (min-width: 1000px) {
+    .filters {
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
   .filters .goods-title {
     text-align: center; }
 

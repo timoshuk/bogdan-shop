@@ -1,6 +1,5 @@
 .pipes-goods {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  @include block;
   overflow-x: hidden;
 }
 

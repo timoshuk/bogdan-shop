@@ -1,6 +1,6 @@
 .main-nav__btn {
   z-index: 999;
-  position: absolute;
+  position: fixed;
   top: 0.5em;
   right: 0.5em;
   background: transparent;
@@ -20,14 +20,14 @@
     display: block;
     opacity: 1;
     min-height: 3px;
-    background: $light-color;
+    background: $hover-color;
     margin-bottom: 5px;
   }
 
   &:hover,
   &:focus {
     & span {
-      background: $hover-color;
+      background: lighten($color: $hover-color, $amount: 20%);
     }
   }
 }
