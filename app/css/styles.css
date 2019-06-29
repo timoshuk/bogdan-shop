@@ -384,6 +384,12 @@ body {
   background-color: #1e2d32;
   padding-top: 2rem;
   padding-bottom: 2rem; }
+  #header .heder-fixed {
+    z-index: 1222;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%; }
 
 .header__top {
   color: #fff;
@@ -555,7 +561,7 @@ body {
     color: #f68aa1; }
 
 #slogan {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
   position: relative;
   min-height: 40vh;
@@ -656,7 +662,7 @@ body {
         font-size: 7rem; } }
 
 .pipes-goods {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
   position: relative;
   min-height: 40vh;
@@ -708,7 +714,7 @@ body {
         margin-bottom: 2em; } }
 
 .pumps {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
   position: relative;
   min-height: 40vh;
@@ -788,7 +794,7 @@ body {
   margin-bottom: 1em; }
 
 .filters {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
   position: relative;
   min-height: 40vh; }
@@ -838,7 +844,7 @@ body {
     color: #fbc237; }
 
 .heating-systems {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
   position: relative;
   min-height: 40vh;
@@ -872,7 +878,7 @@ body {
           line-height: 1.2em; } }
 
 .towels {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
   position: relative;
   min-height: 40vh;

@@ -2,6 +2,14 @@
   background-color: $bg-dark;
   padding-top: 2rem;
   padding-bottom: 2rem;
+
+  & .heder-fixed {
+    z-index: 1222;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
 }
 
 .header__top {
