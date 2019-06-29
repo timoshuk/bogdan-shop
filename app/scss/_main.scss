@@ -13,7 +13,7 @@ html {
 
 body {
   @include font-stile(1.8rem, $font-color, 400, 1.6);
-  background: #fff;
+  background-color: $bg-light;
   min-height: 100vh;
   min-width: 320px;
 

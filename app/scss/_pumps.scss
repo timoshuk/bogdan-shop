@@ -1,6 +1,6 @@
 .pumps {
   @include block;
-  background-color: rgb(243, 243, 243);
+  background-color: $bg-light;
 }
 
 .pumps-wrap {
