@@ -1,0 +1,21 @@
+.img-block {
+  position: relative;
+  height: 60vw;
+  max-height: 400px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  @include mq("tablet") {
+    min-width: 35%;
+    height: initial;
+    margin-right: 2em;
+    box-shadow: 2px 0 10px 3px $bg-dark;
+  }
+  & img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
