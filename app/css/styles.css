@@ -834,4 +834,38 @@ body {
     text-transform: uppercase;
     color: #fbc237; }
 
+.heating-systems {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  position: relative;
+  min-height: 40vh;
+  background: url(../images/heating-systems/hs.jpg) no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  min-height: 300px; }
+  @media only screen and (min-width: 1000px) {
+    .heating-systems {
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
+  @media only screen and (min-width: 1000px) {
+    .heating-systems {
+      min-height: 550px; } }
+  .heating-systems .goods-title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 500px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem; }
+    @media only screen and (min-width: 1000px) {
+      .heating-systems .goods-title {
+        max-width: 650px;
+        font-size: 5.5rem;
+        padding-bottom: 1em; }
+        .heating-systems .goods-title span {
+          display: block;
+          font-size: 8rem;
+          line-height: 1.2em; } }
+
 /*# sourceMappingURL=styles.css.map */
