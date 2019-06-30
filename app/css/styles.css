@@ -924,6 +924,7 @@ body {
         font-size: 2.5rem; } }
 
 .map {
+  display: none;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -934,5 +935,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%; }
+  .map.map--show {
+    display: block; }
 
 /*# sourceMappingURL=styles.css.map */

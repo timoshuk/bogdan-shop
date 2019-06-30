@@ -13,6 +13,7 @@ window.onload = function () {
   var nainNavList = document.getElementById("main-nav__list");
   var mainNavLink = document.querySelectorAll(".main-nav__link");
   var imagesLazy = document.querySelectorAll("img[data-src]");
+  var map = document.querySelector(".map");
   var header = document.getElementById("header");
   var headerHeight = header.offsetHeight;
   imgLazy(imagesLazy);
@@ -62,5 +63,8 @@ window.onload = function () {
     } else {
       header.classList.remove("header--scroll");
     }
-  }
+  } //show footerMap
+
+
+  map.classList.add("map--show");
 };

@@ -1,4 +1,5 @@
 .map {
+  display: none;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -10,5 +11,9 @@
     top: 0;
     width: 100%;
     height: 100%;
+  }
+
+  &.map--show {
+    display: block;
   }
 }

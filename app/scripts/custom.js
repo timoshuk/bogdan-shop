@@ -3,8 +3,10 @@ window.onload = () => {
   const nainNavList = document.getElementById("main-nav__list");
   const mainNavLink = document.querySelectorAll(".main-nav__link");
   const imagesLazy = document.querySelectorAll("img[data-src]");
+  const map = document.querySelector(".map");
   const header = document.getElementById("header");
   let headerHeight = header.offsetHeight;
+
   imgLazy(imagesLazy);
   toggleBtn.addEventListener("click", showMenu);
 
@@ -52,4 +54,7 @@ window.onload = () => {
       header.classList.remove("header--scroll");
     }
   }
+
+  //show footerMap
+  map.classList.add("map--show");
 };
