@@ -340,10 +340,14 @@ body {
     overflow: hidden; }
 
 .page-wrapper {
+  padding-top: 90px;
   background-color: #fff;
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto; }
+  @media only screen and (min-width: 768px) {
+    .page-wrapper {
+      padding-top: 70px; } }
   @media only screen and (min-width: 1000px) {
     .page-wrapper {
       box-shadow: 0px 3px 10px 2px #fbc237;
@@ -381,15 +385,31 @@ body {
        object-fit: cover; }
 
 #header {
+  z-index: 1222;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 130px;
   background-color: #1e2d32;
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
-  #header .heder-fixed {
-    z-index: 1222;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%; }
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  @media only screen and (min-width: 768px) {
+    #header {
+      height: 70px; } }
+  @media only screen and (min-width: 1000px) {
+    #header {
+      height: 150px; } }
+  #header.header--scroll {
+    height: 90px; }
+    @media only screen and (min-width: 1000px) {
+      #header.header--scroll {
+        height: 150px; } }
+    #header.header--scroll .logo {
+      display: none; }
+      @media only screen and (min-width: 768px) {
+        #header.header--scroll .logo {
+          display: block; } }
 
 .header__top {
   color: #fff;

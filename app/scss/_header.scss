@@ -1,14 +1,32 @@
 #header {
+  z-index: 1222;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 130px;
   background-color: $bg-dark;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
-  & .heder-fixed {
-    z-index: 1222;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
+  @include mq("tablet") {
+    height: 70px;
+  }
+  @include mq("desktop") {
+    height: 150px;
+  }
+
+  &.header--scroll {
+    height: 90px;
+    @include mq("desktop") {
+      height: 150px;
+    }
+    & .logo {
+      display: none;
+      @include mq("tablet") {
+        display: block;
+      }
+    }
   }
 }
 
