@@ -704,6 +704,7 @@ body {
 
 .goods-title {
   font-size: 2.5rem;
+  font-weight: bold;
   color: #444;
   line-height: 1.5em;
   margin-bottom: 0.6em; }
@@ -850,6 +851,54 @@ body {
   .filters-description b {
     text-transform: uppercase;
     color: #fbc237; }
+
+@media only screen and (min-width: 768px) {
+  .boyler {
+    display: flex; } }
+
+.boyler .goods-title {
+  color: #fff; }
+
+.boyler__kotel {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../images/heating-systems/kotel.png) no-repeat;
+  background-position: center;
+  background-size: contain; }
+  @media only screen and (min-width: 768px) {
+    .boyler__kotel {
+      width: 70%; } }
+  .boyler__kotel .goods-title--block {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem; }
+    @media only screen and (min-width: 1000px) {
+      .boyler__kotel .goods-title--block {
+        max-width: 650px;
+        font-size: 5.5rem; } }
+
+.boyler__bak {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: url(../images/heating-systems/boyler.jpg) no-repeat;
+  background-position: left top;
+  background-size: cover; }
+  @media only screen and (min-width: 768px) {
+    .boyler__bak {
+      width: 30%; } }
+  .boyler__bak .goods-title {
+    margin-left: auto;
+    text-align: center;
+    max-width: 300px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem; }
 
 .heating-systems {
   padding-top: 5rem;
