@@ -6,7 +6,7 @@
   margin-right: auto;
 
   @include mq("tablet") {
-    padding-top: 70px;
+    padding-top: 50px;
   }
 
   @include mq("desktop") {
