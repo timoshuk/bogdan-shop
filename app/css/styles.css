@@ -401,7 +401,7 @@ body {
 
 .header__top {
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center; }
   @media only screen and (min-width: 768px) {
     .header__top {
@@ -428,7 +428,8 @@ body {
   position: relative;
   text-decoration: none;
   color: #fbc237;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   text-align: left;
   outline: none; }
   .phone__link:hover, .phone__link:focus {
