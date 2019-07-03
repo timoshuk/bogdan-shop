@@ -51,7 +51,7 @@ window.onload = () => {
   const options = {
     // If the image gets within 50px in the Y axis, start the download.
     root: null, // Page as root
-    rootMargin: "50px 0px",
+    rootMargin: "0px",
     threshold: 0.25
   };
 
