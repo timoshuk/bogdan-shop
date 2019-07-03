@@ -12,11 +12,10 @@ window.onload = function () {
   var toggleBtn = document.getElementById("main-nav__btn-toggle");
   var nainNavList = document.getElementById("main-nav__list");
   var mainNavLink = document.querySelectorAll(".main-nav__link");
-  var imagesLazy = document.querySelectorAll("img[data-src]");
+  var images = document.querySelectorAll("img[data-src]");
   var map = document.querySelector(".map");
   var header = document.getElementById("header");
   var headerHeight = header.offsetHeight;
-  imgLazy(imagesLazy);
   toggleBtn.addEventListener("click", showMenu);
 
   _toConsumableArray(mainNavLink).forEach(function (el) {
@@ -38,13 +37,6 @@ window.onload = function () {
   function showMenu() {
     toggleBtn.classList.toggle("main-nav__btn--open");
     nainNavList.classList.toggle("main-nav__list--open");
-  } // Lazy load img
-
-
-  function imgLazy(imgs) {
-    _toConsumableArray(imgs).forEach(function (itemImg) {
-      itemImg.setAttribute("src", itemImg.getAttribute("data-src"));
-    });
   } //get header heit on resize window
 
 
@@ -63,7 +55,57 @@ window.onload = function () {
     } else {
       header.classList.remove("header--scroll");
     }
-  } //show footerMap
+  } // Lazy load IMG
+
+
+  var options = {
+    // If the image gets within 50px in the Y axis, start the download.
+    root: null,
+    // Page as root
+    rootMargin: "50px 0px",
+    threshold: 0.25
+  };
+
+  var fetchImage = function fetchImage(url) {
+    return new Promise(function (resolve, reject) {
+      var image = new Image();
+      image.src = url;
+      image.onload = resolve;
+      image.onerror = reject;
+    });
+  };
+
+  var loadImage = function loadImage(image) {
+    var src = image.dataset.src;
+    fetchImage(src).then(function () {
+      image.src = src;
+    });
+  };
+
+  var handleIntersection = function handleIntersection(entries, observer) {
+    entries.forEach(function (entry) {
+      if (entry.intersectionRatio > 0) {
+        loadImage(entry.target);
+      }
+    });
+  };
+
+  function imgLazy(imgs) {
+    _toConsumableArray(imgs).forEach(function (itemImg) {
+      itemImg.setAttribute("src", itemImg.getAttribute("data-src"));
+    });
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    imgLazy(images);
+  } else {
+    // The observer for the images on the page
+    var observer = new IntersectionObserver(handleIntersection, options);
+    images.forEach(function (img) {
+      observer.observe(img);
+    });
+  } // End lazy load IMG
+  //show footerMap
 
 
   map.classList.add("map--show");
