@@ -1,4 +1,6 @@
 .towels {
+  padding-left: 20px;
+  padding-right: 20px;
   @include block;
   background-color: $bg-light;
 

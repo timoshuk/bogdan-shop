@@ -935,6 +935,8 @@ body {
           line-height: 1.2em; } }
 
 .towels {
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 5rem;
   padding-bottom: 4rem;
   position: relative;
