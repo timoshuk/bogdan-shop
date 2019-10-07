@@ -2,12 +2,11 @@ window.onload = () => {
   const toggleBtn = document.getElementById("main-nav__btn-toggle");
   const nainNavList = document.getElementById("main-nav__list");
   const mainNavLink = document.querySelectorAll(".main-nav__link");
-  const imagesLazy = document.querySelectorAll("img[data-src]");
+  const images = document.querySelectorAll("img[data-src]");
   const map = document.querySelector(".map");
   const header = document.getElementById("header");
   let headerHeight = header.offsetHeight;
 
-  imgLazy(imagesLazy);
   toggleBtn.addEventListener("click", showMenu);
 
   [...mainNavLink].forEach(el => {
@@ -31,13 +30,6 @@ window.onload = () => {
     nainNavList.classList.toggle("main-nav__list--open");
   }
 
-  // Lazy load img
-  function imgLazy(imgs) {
-    [...imgs].forEach(itemImg => {
-      itemImg.setAttribute("src", itemImg.getAttribute("data-src"));
-    });
-  }
-
   //get header heit on resize window
   window.onresize = function() {
     headerHeight = header.offsetHeight;
@@ -55,6 +47,55 @@ window.onload = () => {
     }
   }
 
+  // Lazy load IMG
+  const options = {
+    // If the image gets within 50px in the Y axis, start the download.
+    root: null, // Page as root
+    rootMargin: "0px",
+    threshold: 0.25
+  };
+
+  const fetchImage = url => {
+    return new Promise((resolve, reject) => {
+      const image = new Image();
+      image.src = url;
+      image.onload = resolve;
+      image.onerror = reject;
+    });
+  };
+
+  const loadImage = image => {
+    const src = image.dataset.src;
+    fetchImage(src).then(() => {
+      image.src = src;
+    });
+  };
+
+  const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
+        loadImage(entry.target);
+      }
+    });
+  };
+
+  function imgLazy(imgs) {
+    [...imgs].forEach(itemImg => {
+      itemImg.setAttribute("src", itemImg.getAttribute("data-src"));
+    });
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    imgLazy(images);
+  } else {
+    // The observer for the images on the page
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    images.forEach(img => {
+      observer.observe(img);
+    });
+  }
+  // End lazy load IMG
   //show footerMap
   map.classList.add("map--show");
 };
