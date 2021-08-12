@@ -1,6 +1,6 @@
 # bogdan-shop
 
-## Сайт магазину що торгує сантехнікою
+## Website of a store selling plumbing
 
 The site was created for advertising in **Google AdS**
 
